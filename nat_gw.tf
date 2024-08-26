@@ -1,8 +1,5 @@
 resource "aws_eip" "apinfra_nat_eip" {
   count = length(var.public_subnet_cidrs)
-
-  vpc = true
-
   tags = {
     Name = "apinfra-nat-eip-${count.index + 1}"
   }
@@ -16,4 +13,6 @@ resource "aws_nat_gateway" "apinfra_nat_gateway" {
   tags = {
     Name = "apinfra-nat-gateway-${count.index + 1}"
   }
+
+  depends_on = [aws_internet_gateway.apinfra_igw]
 }
