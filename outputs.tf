@@ -13,10 +13,10 @@ output "private_subnets" {
   value       = aws_subnet.apinfra_private_subnet[*].id
 }
 
-output "nat_gateways" {
-  description = "The IDs of the NAT Gateways"
-  value       = aws_nat_gateway.apinfra_nat_gateway[*].id
-}
+# output "nat_gateways" {
+#   description = "The IDs of the NAT Gateways"
+#   value       = aws_nat_gateway.apinfra_nat_gateway[*].id
+# }
 
 output "security_groups" {
   description = "The IDs of the security groups"
