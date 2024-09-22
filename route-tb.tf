@@ -14,7 +14,7 @@ resource "aws_route_table" "apinfra_rtb_public" {
 resource "aws_route_table_association" "apinfra_route_table_association" {
   count          = length(var.public_subnet_cidrs)
   subnet_id      = aws_subnet.apinfra_public_subnet[count.index].id
-  route_table_id = aws_route_table.apinfra_route_table.id
+  route_table_id = aws_route_table.apinfra_rtb_public.id
 }
 
 resource "aws_route_table" "apinfra_rtb_private" {
