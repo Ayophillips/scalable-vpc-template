@@ -4,15 +4,15 @@ variable "aws_region" {
   default     = "us-east-1"
 }
 
-variable "terraform_state_bucket" {
-  description = "The S3 bucket to store Terraform state."
-  type        = string
-}
+# variable "terraform_state_bucket" {
+#   description = "The S3 bucket to store Terraform state."
+#   type        = string
+# }
 
-variable "terraform_state_key" {
-  description = "The key in S3 to store the state file."
-  type        = string
-}
+# variable "terraform_state_key" {
+#   description = "The key in S3 to store the state file."
+#   type        = string
+# }
 
 variable "vpc_cidr" {
   description = "The CIDR block for the VPC."
