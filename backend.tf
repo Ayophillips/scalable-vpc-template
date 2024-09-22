@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "apinfra_remote_state_bucket" {
-  bucket = "apinfra-remote-state"
+  bucket = var.terraform_state_bucket
 }
 
 resource "aws_s3_bucket_versioning" "apinfra_remote_state_bucket_versioning" {
@@ -20,7 +20,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "apinfra_remote_st
 }
 
 resource "aws_dynamodb_table" "apinfra_remote_state_locking" {
-  name     = "apinfra-remote-state-locking"
+  name     = var.dynamo_db_table
   hash_key = "LockID"
   attribute {
     name = "LockID"
