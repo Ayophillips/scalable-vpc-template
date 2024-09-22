@@ -4,11 +4,6 @@ variable "aws_region" {
   default     = "us-east-1"
 }
 
-variable "aws_profile" {
-  description = "The AWS profile to use for this deployment."
-  type        = string
-}
-
 variable "terraform_state_bucket" {
   description = "The S3 bucket to store Terraform state."
   type        = string
