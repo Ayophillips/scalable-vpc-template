@@ -1,2 +1,2 @@
-# apinfratemplate
-A resource template for your AWS deployments
+# scalable-vpc-template
+A resource template for your AWS VPC deployments
